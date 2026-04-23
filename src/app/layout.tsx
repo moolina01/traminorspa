@@ -3,6 +3,10 @@ import { jakartaSans, dmSans, spaceMono } from "@/lib/fonts"
 import "./globals.css"
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
   title: "Traminor SPA — Transporte Especializado de Ácido Sulfúrico | Copiapó, Atacama",
   description:
     "Empresa líder en transporte de ácido sulfúrico y carga pesada para la industria minera en la Región de Atacama, Chile. Más de 15 años de experiencia, certificaciones ISO y flota moderna.",
