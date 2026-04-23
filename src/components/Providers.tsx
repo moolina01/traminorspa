@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 // logo: ruta dentro de /public  (ej. "/logos/enami.svg")
 // name: nombre de la empresa (se muestra como alt y debajo del logo)
 const PROVIDERS = [
-  { name: "Proveedor 1", logo: "/logo-Enami.jpg" },
+  { name: "Proveedor 1", logo: "/Logo-Enami.jpg" },
   { name: "Proveedor 2", logo: "/img-logo-cenizas.png" },
   { name: "Proveedor 3", logo: "/acf.png" },
   { name: "Proveedor 4", logo: "/altonorte.jpg" },

@@ -7,7 +7,7 @@ export const COMPANY = {
   description: "Empresa de transporte de materiales peligrosos y carga pesada, especializada en la industria minera de la Región de Atacama.",
   rut: "XX.XXX.XXX-X",
   address: "Rahue #1660, Paipote — Copiapó, Chile",
-  phone: "+56 9 XXXX XXXX",
+  phone: "+56 9 57866535",
   email: "gerencia@traminorspa.com",
   contactName: "Roberto Zazzali Aburto",
   contactRole: "Gerencia",

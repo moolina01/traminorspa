@@ -5,7 +5,7 @@ import SectionTitle from "@/components/ui/SectionTitle"
 import { COMPANY } from "@/lib/constants"
 
 const EMAIL = COMPANY.email
-const MAILTO = `mailto:${EMAIL}?subject=Propuesta%20de%20Contrato%20-%20Traminor%20SPA`
+const MAILTO = `mailto:${EMAIL}`
 
 function ContactInfo({
   icon,
