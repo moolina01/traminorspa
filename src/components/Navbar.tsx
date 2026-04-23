@@ -65,7 +65,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={resolveHref(link.href)}
-                className="text-sm text-white/75 hover:text-white transition-colors duration-200 tracking-wide"
+                className="text-sm text-white/60 hover:text-white transition-all duration-200 tracking-wide hover:tracking-widest"
               >
                 {link.label}
               </a>

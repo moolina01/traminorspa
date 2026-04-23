@@ -36,6 +36,8 @@ export default function Hero() {
 
       {/* Subtle overlay — NOT too dark, client wants to see the trucks */}
       <div className="absolute inset-0 bg-gradient-to-t from-navy-950/75 via-navy-950/20 to-navy-950/10" />
+      {/* Gradiente superior para que el navbar siempre sea legible */}
+      <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-navy-950/70 to-transparent" />
 
       {/* Diagonal accent line — our design touch */}
       <div

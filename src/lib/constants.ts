@@ -26,7 +26,7 @@ export const NAV_LINKS = [
 
 export const STATS = [
   { value: 15, suffix: "+", label: "Años de experiencia" },
-  { value: 50000, suffix: "+", label: "Viajes realizados", format: "compact" },
+  { value: 9000, suffix: "+", label: "Viajes realizados", format: "compact" },
   { value: 2, suffix: "M+", label: "Kilómetros recorridos" },
   { value: 99.8, suffix: "%", label: "Entregas sin incidentes" },
 ]
