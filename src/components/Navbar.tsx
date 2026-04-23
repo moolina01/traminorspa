@@ -77,9 +77,10 @@ export default function Navbar() {
         <div className="flex">
           <a
             href={resolveHref("#contacto")}
-            className="inline-flex items-center gap-2 bg-[#E30613] hover:bg-[#C00510] text-white text-sm font-semibold px-6 py-2.5 transition-colors duration-200"
+            className="inline-flex items-center gap-2 bg-[#E30613] hover:bg-[#C00510] text-white font-semibold transition-colors duration-200 text-xs px-3 py-2 lg:text-sm lg:px-6 lg:py-2.5"
           >
-            Trabajemos Juntos
+            <span className="hidden sm:inline">Trabajemos Juntos</span>
+            <span className="sm:hidden">Contacto</span>
           </a>
         </div>
 
