@@ -79,7 +79,11 @@ export default function Hero() {
               textShadow: "0 2px 16px rgba(0,0,0,0.4)",
             }}
           >
-            Empresa de Transportes de carga por carretera y servicios vinculados al transporte
+            Empresa de{" "}
+            <span style={{ color: "#E30613" }}>Transportes</span>{" "}
+            de carga por carretera y{" "}
+            <span className="text-white font-extrabold">servicios vinculados</span>{" "}
+            al transporte
           </motion.h1>
 
           {/* Location subtitle — centered */}
@@ -96,13 +100,13 @@ export default function Hero() {
           {/* CTA button — centered */}
           <motion.div variants={item} className="mt-6 flex justify-center">
             <motion.a
-              href="#contacto"
+              href="#servicios"
               className="inline-flex items-center gap-3 bg-[#E30613] hover:bg-[#C00510] text-white font-semibold px-8 py-4 text-sm tracking-wide shadow-md hover:shadow-lg shadow-[#E30613]/30 transition-all duration-200 group"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
             >
-              Trabajemos Juntos
+              Nuestros Servicios
               <svg
                 className="w-4 h-4 group-hover:translate-x-1 transition-transform"
                 fill="none"

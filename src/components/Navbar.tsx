@@ -38,9 +38,9 @@ export default function Navbar() {
           <Image
             src="/logoresolucionalta.png"
             alt=""
-            height={128}
-            width={128}
-            className="h-20 w-auto object-contain"
+            height={160}
+            width={160}
+            className="h-[88px] w-auto object-contain"
             priority
           />
           {/* <span className="flex flex-col leading-none">
@@ -73,15 +73,15 @@ export default function Navbar() {
           ))}
         </ul>
 
-       {/* CTA */}
-<div className="hidden lg:flex">
-  <a
-    href={resolveHref("#contacto")}
-    className="inline-flex items-center gap-2 bg-[#E30613] hover:bg-[#C00510] text-white text-sm font-semibold px-6 py-2.5 transition-colors duration-200"
-  >
-   contáctanos 
-  </a>
-</div>
+        {/* CTA */}
+        <div className="flex">
+          <a
+            href={resolveHref("#contacto")}
+            className="inline-flex items-center gap-2 bg-[#E30613] hover:bg-[#C00510] text-white text-sm font-semibold px-6 py-2.5 transition-colors duration-200"
+          >
+            Trabajemos Juntos
+          </a>
+        </div>
 
         {/* Hamburger */}
         <button
