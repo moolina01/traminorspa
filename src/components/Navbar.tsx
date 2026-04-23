@@ -38,9 +38,9 @@ export default function Navbar() {
           <Image
             src="/logoresolucionalta.png"
             alt=""
-            height={180}
-            width={180}
-            className="h-[104px] w-auto object-contain"
+            height={220}
+            width={220}
+            className="h-[128px] w-auto object-contain"
             priority
           />
           {/* <span className="flex flex-col leading-none">
