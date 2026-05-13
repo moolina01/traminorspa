@@ -7,7 +7,7 @@ export const COMPANY = {
   description: "Empresa de transporte de materiales peligrosos y carga pesada, especializada en la industria minera de la Región de Atacama.",
   rut: "XX.XXX.XXX-X",
   address: "Rahue #1660, Paipote — Copiapó, Chile",
-  phone: "+56 9 57866535",
+  phone: "+56 9 82060730 / +56 9 52089116",
   email: "gerencia@traminorspa.com",
   contactName: "Roberto Zazzali Aburto",
   contactRole: "Gerencia",
@@ -50,8 +50,8 @@ export const SERVICES = [
     description: "Contamos con una flota de camiones equipados especialmente para el transporte de ácido, asegurando su seguridad y llegada a tiempo a su destino.",
   },
   {
-    title: "Transporte de Maquinarias",
-    description: "Ofrecemos flexibilidad en el traslado de maquinaria y equipos pesados, tanto dentro como fuera de la región.",
+    title: "Servicios de Cargas Varias",
+    description: "Ofrecemos soluciones de transporte para todo tipo de carga, adaptándonos a las necesidades específicas de cada cliente y ruta.",
   },
   {
     title: "Transporte de Mineral",
@@ -102,7 +102,7 @@ export const FLEET_ITEMS = [
 
 export const SERVICE_TYPES = [
   "Transporte de Ácido Sulfúrico",
-  "Transporte de Maquinarias",
+  "Servicios de Cargas Varias",
   "Transporte de Mineral",
   "Otro",
 ]

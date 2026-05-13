@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import SectionTitle from "@/components/ui/SectionTitle"
 import { PURPOSE_CARDS } from "@/lib/constants"
@@ -77,7 +78,23 @@ export default function Purpose() {
             )
           })}
         </div>
+
       </div>
+
+      {/* Foto panorámica inferior — full bleed */}
+      <ScrollReveal className="mt-16">
+        <div className="relative w-full h-72 md:h-96 overflow-hidden">
+          <Image
+            src="/foto11.jpeg"
+            alt="Flota Traminor en operación"
+            fill
+            quality={100}
+            sizes="100vw"
+            className="object-cover object-center ken-burns"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 via-transparent to-transparent" />
+        </div>
+      </ScrollReveal>
 
       {/* Franja decorativa inferior — rojo + negro */}
       <div className="absolute bottom-0 left-0 right-0 flex flex-col">

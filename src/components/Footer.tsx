@@ -123,9 +123,12 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-3">
               <li className="text-zinc-500 text-[13px] leading-relaxed">{COMPANY.address}</li>
-              <li>
-                <a href={`tel:${COMPANY.phone}`} className="text-zinc-500 hover:text-white text-[13px] transition-colors">
-                  {COMPANY.phone}
+              <li className="flex flex-col gap-1">
+                <a href="tel:+56982060730" className="text-zinc-500 hover:text-white text-[13px] transition-colors">
+                  +56 9 82060730
+                </a>
+                <a href="tel:+56952089116" className="text-zinc-500 hover:text-white text-[13px] transition-colors">
+                  +56 9 52089116
                 </a>
               </li>
               <li>

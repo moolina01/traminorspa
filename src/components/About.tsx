@@ -1,34 +1,88 @@
 "use client"
- 
+
+import { useState, useEffect } from "react"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import AnimatedCounter from "@/components/ui/AnimatedCounter"
 import { STATS } from "@/lib/constants"
 import Image from "next/image"
- 
+
+const CAROUSEL_IMAGES = [
+  { src: "/foto10.jpeg", alt: "Operaciones Traminor" },
+  { src: "/foto9.jpeg",  alt: "Flota Traminor" },
+  { src: "/foto8.jpeg",  alt: "Transporte minero Traminor" },
+]
+
 export default function About() {
+  const [current, setCurrent] = useState(0)
+
+  const prev = () => setCurrent((c) => (c - 1 + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length)
+  const next = () => setCurrent((c) => (c + 1) % CAROUSEL_IMAGES.length)
+
+  useEffect(() => {
+    const timer = setInterval(next, 4000)
+    return () => clearInterval(timer)
+  }, [])
+
   return (
     <section id="nosotros" className="overflow-hidden">
       {/* ── Asymmetric company section ── */}
       <div className="bg-cream noise-overlay">
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
           <div className="grid lg:grid-cols-[55%_45%] gap-0 items-center">
-            
-            {/* Image — bleeds slightly past its column */}
-            <ScrollReveal direction="left" className="relative lg:-ml-8 lg:mr-8">
+
+            {/* Carousel — bleeds slightly past its column */}
+            <ScrollReveal direction="left" className="relative lg:pl-4 lg:mr-8">
               <div
-                className="relative aspect-[4/3] overflow-hidden"
+                className="relative aspect-[4/3] overflow-hidden bg-navy-950"
                 style={{ boxShadow: "24px 24px 0 0 var(--color-sand)" }}
               >
-                <Image
-                  src="/about.jpeg"
-                  alt="Flota Traminor en operación"
-                  fill
-                  className="object-cover"
-                />
+                {CAROUSEL_IMAGES.map((img, i) => (
+                  <Image
+                    key={img.src}
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-contain transition-opacity duration-1000"
+                    style={{ opacity: i === current ? 1 : 0 }}
+                    priority={i === 0}
+                  />
+                ))}
                 {/* Diagonal accent overlay */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-navy-950/60 via-transparent to-transparent" />
                 {/* Accent corner */}
                 <div className="absolute top-0 right-0 w-16 h-16 bg-accent/20" />
+
+                {/* Arrow buttons */}
+                <button
+                  onClick={prev}
+                  aria-label="Anterior"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-9 h-9 rounded-full bg-navy-950/60 text-white hover:bg-accent/80 transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button
+                  onClick={next}
+                  aria-label="Siguiente"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-9 h-9 rounded-full bg-navy-950/60 text-white hover:bg-accent/80 transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+
+                {/* Dot indicators */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+                  {CAROUSEL_IMAGES.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setCurrent(i)}
+                      aria-label={`Ir a imagen ${i + 1}`}
+                      className={`w-2 h-2 rounded-full transition-colors ${i === current ? "bg-accent" : "bg-white/50"}`}
+                    />
+                  ))}
+                </div>
               </div>
             </ScrollReveal>
  
@@ -62,7 +116,7 @@ export default function About() {
                 </p>
                 <p className="text-steel leading-relaxed text-base md:text-[15px]">
                   Operamos en el desierto más árido del mundo con la seriedad que exige el transporte
-                  de materiales peligrosos. Cada viaje es un compromiso.
+                  de sustancias peligrosas. Cada viaje es un compromiso.
                 </p>
                 <a
                   href="#contacto"

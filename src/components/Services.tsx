@@ -16,11 +16,11 @@ const SERVICES = [
     alt: "Tracto y semirremolque cisterna",
   },
   {
-    title: "TRANSPORTE DE MAQUINARIAS",
+    title: "SERVICIOS DE CARGAS VARIAS",
     description:
-      "Ofrecemos flexibilidad en el traslado de maquinaria y equipos pesados, tanto dentro como fuera de la región.",
-    image: "/trasnportado-maquina.jpeg",
-    alt: "Cama baja transportando máquina",
+      "Ofrecemos soluciones de transporte para todo tipo de carga, adaptándonos a las necesidades específicas de cada cliente y ruta.",
+    image: "/foto7.jpeg",
+    alt: "Flota Traminor para cargas varias",
   },
   {
     title: "TRANSPORTES DE MINERAL",

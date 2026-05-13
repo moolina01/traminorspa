@@ -91,3 +91,14 @@ body {
 .scroll-indicator-line {
   animation: scrollPulse 2s ease-in-out infinite;
 }
+
+/* ── Ken Burns effect ── */
+@keyframes kenBurns {
+  0%   { transform: scale(1)    translateX(0)      translateY(0); }
+  50%  { transform: scale(1.06) translateX(-1.5%)  translateY(-0.5%); }
+  100% { transform: scale(1)    translateX(0)      translateY(0); }
+}
+.ken-burns {
+  animation: kenBurns 14s ease-in-out infinite;
+  will-change: transform;
+}
