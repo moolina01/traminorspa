@@ -83,7 +83,7 @@ export default function Purpose() {
 
       {/* Foto panorámica inferior — full bleed */}
       <ScrollReveal className="mt-16">
-        <div className="relative w-full h-72 md:h-96 overflow-hidden">
+        <div className="relative w-full aspect-[2/1] overflow-hidden">
           <Image
             src="/foto11.jpeg"
             alt="Flota Traminor en operación"
